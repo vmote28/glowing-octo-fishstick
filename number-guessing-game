@@ -1,0 +1,37 @@
+# The code below is from Copilot on Github and I edited to make it work. 
+# My instructor posted something similar during classs but
+# either I didn't copy it or the app did not save it.
+
+import random
+
+def number_guessing_game():
+    number_to_guess = random.randint(1, 100)
+    number_of_attempts = 0
+    maximum_attempts = 5
+    guess = None
+
+    print("Welcome to the Number Guessing Game!")
+    print(f"I have selected a number between 1 and 100. You have {maximum_attempts} attempts. Can you guess what it is?")
+
+    while guess != number_to_guess and number_of_attempts != maximum_attempts:
+        guess = int(input("Enter your guess number: "))
+        number_of_attempts += 1
+        
+        if (guess < number_to_guess):
+            print("Too low!")
+            print(f"You have {maximum_attempts - number_of_attempts} attempts remaining")
+            
+        elif (guess > number_to_guess):
+            print("Too high!")
+            print(f"You have {maximum_attempts - number_of_attempts} attempts remaining")
+            
+        elif (guess == number_to_guess):
+            print(f"Congratulations! You've guessed the number in {number_of_attempts} attempts.")
+            print("Thanks for playing!")
+            
+        if (number_of_attempts == maximum_attempts):
+            print(f"Sorry, you reached the maximum attempts. The answer was {number_to_guess}!")
+            print("Thansks for playing!")
+
+if __name__ == "__main__":
+    number_guessing_game()
