@@ -31,7 +31,7 @@ def number_guessing_game():
             
         if (number_of_attempts == maximum_attempts):
             print(f"Sorry, you reached the maximum attempts. The answer was {number_to_guess}!")
-            print("Thansks for playing!")
+            print("Thanks for playing!")
 
 if __name__ == "__main__":
     number_guessing_game()
